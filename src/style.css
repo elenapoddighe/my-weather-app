@@ -72,19 +72,20 @@ main {
 }
 
 .icon {
-  font-size: 44px;
-  margin-top: 22px;
+  width: 88px;
+  height: 88px;
 }
 
 .temperature {
   font-size: 88px;
   font-weight: bold;
+  line-height: 88px;
   margin-left: 5px;
 }
 
 .unit {
   font-size: 28px;
-  margin-top: 15px;
+  margin-top: 6px;
 }
 
 footer {
