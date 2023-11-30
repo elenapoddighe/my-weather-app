@@ -8,6 +8,9 @@ function refreshWeather(response) {
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
   let iconElement = document.querySelector("#icon");
+  let feelsLikeElement = document.querySelector("#feels_like");
+  let longitudeElement = document.querySelector("#longitude");
+  let latitudeElement = document.querySelector("#latitude");
 
   cityElement.innerHTML = response.data.city;
   timeElement.innerHTML = formatDate(date);
@@ -16,6 +19,11 @@ function refreshWeather(response) {
   speedElement.innerHTML = `${response.data.wind.speed}km/h`;
   temperatureElement.innerHTML = Math.round(temperature);
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="icon" />`;
+  feelsLikeElement.innerHTML = `${Math.round(
+    response.data.temperature.feels_like
+  )}°`;
+  longitudeElement.innerHTML = response.data.coordinates.longitude;
+  latitudeElement.innerHTML = response.data.coordinates.latitude;
 
   getForecast(response.data.city);
 }
