@@ -26,6 +26,30 @@ function refreshWeather(response) {
     'url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/426/original/roberto-sorin-w5AIBOeo9Uo-unsplash.jpg?1701355464")';
   let scatteredCloudsNightImage =
     'url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/427/original/aral-tasher-njMi2OFoQqQ-unsplash.jpg?1701355721")';
+  let brokenCloudsDayImage =
+    'url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/429/original/tim-oliver-metz-glFocUiIyWo-unsplash.jpg?1701356115")';
+  let brokenCloudsNightImage =
+    'url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/430/original/anandu-vinod-pbxwxwfI0B4-unsplash.jpg?1701356375")';
+  let showerRainDayImage =
+    'url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/433/original/nick-nice-ve-R7PCjJDk-unsplash.jpg?1701356693")';
+  let showerRainNightImage =
+    'url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/432/original/valentin-muller-bWtd1ZyEy6w-unsplash.jpg?1701356668")';
+  let rainDayImage =
+    'url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/435/original/inge-maria-pv2ZlDfstXc-unsplash.jpg?1701357295")';
+  let rainNightImage =
+    'url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/434/original/eutah-mizushima-F-t5EpfQNpk-unsplash.jpg?1701357234")';
+  let thunderstormDayImage =
+    'url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/441/original/raychel-sanner-1cJXplTxrmI-unsplash.jpg?1701357734")';
+  let thunderstormNightImage =
+    'url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/439/original/melody-p-wFN9B3s_iik-unsplash.jpg?1701357654")';
+  let snowDayImage =
+    'url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/443/original/chandler-cruttenden-kM1p1c1q8qo-unsplash.jpg?1701358190")';
+  let snowNightImage =
+    'url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/444/original/william-topa-dG8d8JYnnvA-unsplash.jpg?1701358410")';
+  let mistDayImage =
+    'url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/445/original/ricardo-gomez-angel-jg4pkrwaico-unsplash.jpg?1701358560")';
+  let mistNightImage =
+    'url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/447/original/sasha-matic-kfv9sfd4gDk-unsplash.jpg?1701358807")';
 
   cityElement.innerHTML = response.data.city;
   timeElement.innerHTML = formatDate(date);
@@ -195,7 +219,7 @@ function refreshWeather(response) {
     suggestionElement.innerHTML = "💧, 🕶️, 🧴 and you are ready to go!";
     bodyElement.style.backgroundImage = scatteredCloudsDayImage;
   } else if (
-    iconDescriptionElement === "scattere-clouds-day" &&
+    iconDescriptionElement === "scattered-clouds-day" &&
     temperature === 20
   ) {
     suggestionElement.innerHTML = "🕶️ are a must today!";
@@ -225,40 +249,353 @@ function refreshWeather(response) {
 
   if (iconDescriptionElement === "scattered-clouds-night" && temperature > 30) {
     suggestionElement.innerHTML = "🥵🥵🥵";
-    bodyElement.style.backgroundImage = scatteredCloudsDayImage;
+    bodyElement.style.backgroundImage = scatteredCloudsNightImage;
   } else if (
     iconDescriptionElement === "scattered-clouds-night" &&
     temperature < 30 &&
     temperature > 20
   ) {
     suggestionElement.innerHTML = "I know, hell is here...🥵";
-    bodyElement.style.backgroundImage = scatteredCloudsDayImage;
+    bodyElement.style.backgroundImage = scatteredCloudsNightImage;
   } else if (
     iconDescriptionElement === "scattered-clouds-night" &&
     temperature === 20
   ) {
     suggestionElement.innerHTML = "An almost perfect night, enjoy!";
-    bodyElement.style.backgroundImage = scatteredCloudsDayImage;
+    bodyElement.style.backgroundImage = scatteredCloudsNightImage;
   } else if (
     iconDescriptionElement === "scattered-clouds-night" &&
     temperature < 20 &&
     temperature > 15
   ) {
     suggestionElement.innerHTML = "Don't forget that 🧥!";
-    bodyElement.style.backgroundImage = scatteredCloudsDayImage;
+    bodyElement.style.backgroundImage = scatteredCloudsNightImage;
   } else if (
     iconDescriptionElement === "scattered-clouds-night" &&
     temperature < 15 &&
     temperature > 10
   ) {
     suggestionElement.innerHTML = "Mandatory: 🧥, 🧣, 🧤, 🕶️";
-    bodyElement.style.backgroundImage = scatteredCloudsDayImage;
+    bodyElement.style.backgroundImage = scatteredCloudsNightImage;
   } else if (
     iconDescriptionElement === "scattered-clouds-night" &&
     temperature < 10
   ) {
     suggestionElement.innerHTML = "Make sure to keep yourself warm! 🔥";
-    bodyElement.style.backgroundImage = scatteredCloudsDayImage;
+    bodyElement.style.backgroundImage = scatteredCloudsNightImage;
+  }
+
+  if (iconDescriptionElement === "broken-clouds-day" && temperature > 30) {
+    suggestionElement.innerHTML = "🥵 Too hot...and it's not even sunny...😡";
+    bodyElement.style.backgroundImage = brokenCloudsDayImage;
+  } else if (
+    iconDescriptionElement === "broken-clouds-day" &&
+    temperature < 30 &&
+    temperature > 20
+  ) {
+    suggestionElement.innerHTML = "🥵🥵🥵";
+    bodyElement.style.backgroundImage = brokenCloudsDayImage;
+  } else if (
+    iconDescriptionElement === "broken-clouds-day" &&
+    temperature === 20
+  ) {
+    suggestionElement.innerHTML = "🫤🫤!";
+    bodyElement.style.backgroundImage = brokenCloudsDayImage;
+  } else if (
+    iconDescriptionElement === "broken-clouds-day" &&
+    temperature < 20 &&
+    temperature > 15
+  ) {
+    suggestionElement.innerHTML = "Don't forget that 🧥!";
+    bodyElement.style.backgroundImage = brokenCloudsDayImage;
+  } else if (
+    iconDescriptionElement === "broken-clouds-day" &&
+    temperature < 15 &&
+    temperature > 10
+  ) {
+    suggestionElement.innerHTML = "Mandatory: 🧥, 🧣, 🧤, 🕶️";
+    bodyElement.style.backgroundImage = brokenCloudsDayImage;
+  } else if (
+    iconDescriptionElement === "broken-clouds-day" &&
+    temperature < 10
+  ) {
+    suggestionElement.innerHTML =
+      "Beautiful but 🥶, make sure to keep yourself warm!";
+    bodyElement.style.backgroundImage = brokenCloudsDayImage;
+  }
+
+  if (iconDescriptionElement === "broken-clouds-night" && temperature > 30) {
+    suggestionElement.innerHTML = "🥵🥵🥵";
+    bodyElement.style.backgroundImage = brokenCloudsNightImage;
+  } else if (
+    iconDescriptionElement === "broken-clouds-night" &&
+    temperature < 30 &&
+    temperature > 20
+  ) {
+    suggestionElement.innerHTML = "I know, this is hell...🥵";
+    bodyElement.style.backgroundImage = brokenCloudsNightImage;
+  } else if (
+    iconDescriptionElement === "broken-clouds-night" &&
+    temperature === 20
+  ) {
+    suggestionElement.innerHTML = "An almost perfect night, enjoy!";
+    bodyElement.style.backgroundImage = brokenCloudsNightImage;
+  } else if (
+    iconDescriptionElement === "broken-clouds-night" &&
+    temperature < 20 &&
+    temperature > 15
+  ) {
+    suggestionElement.innerHTML = "Don't forget that 🧥!";
+    bodyElement.style.backgroundImage = brokenCloudsNightImage;
+  } else if (
+    iconDescriptionElement === "broken-clouds-night" &&
+    temperature < 15 &&
+    temperature > 10
+  ) {
+    suggestionElement.innerHTML = "Mandatory: 🧥, 🧣, 🧤";
+    bodyElement.style.backgroundImage = brokenCloudsNightImage;
+  } else if (
+    iconDescriptionElement === "broken-clouds-night" &&
+    temperature < 10
+  ) {
+    suggestionElement.innerHTML = "Make sure to keep yourself warm! 🔥";
+    bodyElement.style.backgroundImage = brokenCloudsNightImage;
+  }
+
+  if (iconDescriptionElement === "shower-rain-day" && temperature > 30) {
+    suggestionElement.innerHTML = "Tropical storm? 🥵💧";
+    bodyElement.style.backgroundImage = showerRainDayImage;
+  } else if (
+    iconDescriptionElement === "shower-rain-day" &&
+    temperature < 30 &&
+    temperature > 20
+  ) {
+    suggestionElement.innerHTML = "Perfect temperature but...🫤";
+    bodyElement.style.backgroundImage = showerRainDayImage;
+  } else if (
+    iconDescriptionElement === "shower-rain-day" &&
+    temperature === 20
+  ) {
+    suggestionElement.innerHTML = "☂️☂️!";
+    bodyElement.style.backgroundImage = showerRainDayImage;
+  } else if (
+    iconDescriptionElement === "shower-rain-day" &&
+    temperature < 20 &&
+    temperature > 15
+  ) {
+    suggestionElement.innerHTML = "Don't forget 🧥 & ☂️!";
+    bodyElement.style.backgroundImage = showerRainDayImage;
+  } else if (
+    iconDescriptionElement === "shower-rain-day" &&
+    temperature < 15 &&
+    temperature > 10
+  ) {
+    suggestionElement.innerHTML = "Mandatory: 🧥, 🧣, 🧤, ☂️";
+    bodyElement.style.backgroundImage = showerRainDayImage;
+  } else if (iconDescriptionElement === "shower-rain-day" && temperature < 10) {
+    suggestionElement.innerHTML = "Better stay inside today!";
+    bodyElement.style.backgroundImage = showerRainDayImage;
+  }
+
+  if (iconDescriptionElement === "shower-rain-night" && temperature > 30) {
+    suggestionElement.innerHTML = "Tropical storm? 🥵💧";
+    bodyElement.style.backgroundImage = showerRainNightImage;
+  } else if (
+    iconDescriptionElement === "shower-rain-night" &&
+    temperature < 30 &&
+    temperature > 20
+  ) {
+    suggestionElement.innerHTML = "Perfect temperature but...🫤";
+    bodyElement.style.backgroundImage = showerRainNightImage;
+  } else if (
+    iconDescriptionElement === "shower-rain-night" &&
+    temperature === 20
+  ) {
+    suggestionElement.innerHTML = "☂️☂️!";
+    bodyElement.style.backgroundImage = showerRainNightImage;
+  } else if (
+    iconDescriptionElement === "shower-rain-night" &&
+    temperature < 20 &&
+    temperature > 15
+  ) {
+    suggestionElement.innerHTML = "Don't forget 🧥 & ☂️!";
+    bodyElement.style.backgroundImage = showerRainNightImage;
+  } else if (
+    iconDescriptionElement === "shower-rain-night" &&
+    temperature < 15 &&
+    temperature > 10
+  ) {
+    suggestionElement.innerHTML = "Mandatory: 🧥, 🧣, 🧤, ☂️";
+    bodyElement.style.backgroundImage = showerRainNightImage;
+  } else if (
+    iconDescriptionElement === "shower-rain-night" &&
+    temperature < 10
+  ) {
+    suggestionElement.innerHTML = "Better stay inside today!";
+    bodyElement.style.backgroundImage = showerRainNightImage;
+  }
+
+  if (iconDescriptionElement === "rain-day" && temperature > 30) {
+    suggestionElement.innerHTML = "Tropical storm? 🥵💧";
+    bodyElement.style.backgroundImage = rainDayImage;
+  } else if (
+    iconDescriptionElement === "rain-day" &&
+    temperature < 30 &&
+    temperature > 20
+  ) {
+    suggestionElement.innerHTML = "Perfect temperature but...🫤";
+    bodyElement.style.backgroundImage = rainDayImage;
+  } else if (iconDescriptionElement === "rain-day" && temperature === 20) {
+    suggestionElement.innerHTML = "☂️☂️☂️!";
+    bodyElement.style.backgroundImage = rainDayImage;
+  } else if (
+    iconDescriptionElement === "rain-day" &&
+    temperature < 20 &&
+    temperature > 15
+  ) {
+    suggestionElement.innerHTML = "Don't forget 🧥 & ☂️!";
+    bodyElement.style.backgroundImage = rainDayImage;
+  } else if (
+    iconDescriptionElement === "rain-day" &&
+    temperature < 15 &&
+    temperature > 10
+  ) {
+    suggestionElement.innerHTML = "Mandatory: 🧥, 🧣, 🧤, ☂️";
+    bodyElement.style.backgroundImage = rainDayImage;
+  } else if (iconDescriptionElement === "rain-day" && temperature < 10) {
+    suggestionElement.innerHTML = "Better stay inside today!";
+    bodyElement.style.backgroundImage = rainDayImage;
+  }
+
+  if (iconDescriptionElement === "rain-night" && temperature > 30) {
+    suggestionElement.innerHTML = "Tropical storm? 🥵💧";
+    bodyElement.style.backgroundImage = rainNightImage;
+  } else if (
+    iconDescriptionElement === "rain-night" &&
+    temperature < 30 &&
+    temperature > 20
+  ) {
+    suggestionElement.innerHTML = "Perfect temperature but...🫤";
+    bodyElement.style.backgroundImage = rainNightImage;
+  } else if (iconDescriptionElement === "rain-night" && temperature === 20) {
+    suggestionElement.innerHTML = "☂️☂️☂️!";
+    bodyElement.style.backgroundImage = rainNightImage;
+  } else if (
+    iconDescriptionElement === "rain-night" &&
+    temperature < 20 &&
+    temperature > 15
+  ) {
+    suggestionElement.innerHTML = "Don't forget 🧥 & ☂️!";
+    bodyElement.style.backgroundImage = rainNightImage;
+  } else if (
+    iconDescriptionElement === "rain-night" &&
+    temperature < 15 &&
+    temperature > 10
+  ) {
+    suggestionElement.innerHTML = "Mandatory: 🧥, 🧣, 🧤, ☂️";
+    bodyElement.style.backgroundImage = rainNightImage;
+  } else if (iconDescriptionElement === "rain-night" && temperature < 10) {
+    suggestionElement.innerHTML = "Better stay inside today!";
+    bodyElement.style.backgroundImage = rainNightImage;
+  }
+
+  if (iconDescriptionElement === "thunderstorm-day" && temperature > 30) {
+    suggestionElement.innerHTML = "...Ok...maybe we get out tomorrow?";
+    bodyElement.style.backgroundImage = thunderstormDayImage;
+  } else if (
+    iconDescriptionElement === "thunderstorm-day" &&
+    temperature < 30 &&
+    temperature > 20
+  ) {
+    suggestionElement.innerHTML = "Netflix and chill?";
+    bodyElement.style.backgroundImage = thunderstormDayImage;
+  } else if (
+    iconDescriptionElement === "thunderstorm-day" &&
+    temperature === 20
+  ) {
+    suggestionElement.innerHTML = "☂️☂️☂️!";
+    bodyElement.style.backgroundImage = thunderstormDayImage;
+  } else if (
+    iconDescriptionElement === "thunderstorm-day" &&
+    temperature < 20 &&
+    temperature > 15
+  ) {
+    suggestionElement.innerHTML = "Don't forget 🧥 & ☂️!";
+    bodyElement.style.backgroundImage = thunderstormDayImage;
+  } else if (
+    iconDescriptionElement === "thunderstorm-day" &&
+    temperature < 15 &&
+    temperature > 10
+  ) {
+    suggestionElement.innerHTML = "Mandatory: 🧥, 🧣, 🧤, ☂️";
+    bodyElement.style.backgroundImage = thunderstormDayImage;
+  } else if (
+    iconDescriptionElement === "thunderstorm-day" &&
+    temperature < 10
+  ) {
+    suggestionElement.innerHTML = "Better stay inside today!";
+    bodyElement.style.backgroundImage = thunderstormDayImage;
+  }
+
+  if (iconDescriptionElement === "thunderstorm-night" && temperature > 30) {
+    suggestionElement.innerHTML = "...Ok...maybe we get out tomorrow?";
+    bodyElement.style.backgroundImage = thunderstormNightImage;
+  } else if (
+    iconDescriptionElement === "thunderstorm-night" &&
+    temperature < 30 &&
+    temperature > 20
+  ) {
+    suggestionElement.innerHTML = "Netflix and chill?";
+    bodyElement.style.backgroundImage = thunderstormNightImage;
+  } else if (
+    iconDescriptionElement === "thunderstorm-night" &&
+    temperature === 20
+  ) {
+    suggestionElement.innerHTML = "☂️☂️☂️!";
+    bodyElement.style.backgroundImage = thunderstormNightImage;
+  } else if (
+    iconDescriptionElement === "thunderstorm-night" &&
+    temperature < 20 &&
+    temperature > 15
+  ) {
+    suggestionElement.innerHTML = "Do you really need to get out tonight? 🤔";
+    bodyElement.style.backgroundImage = thunderstormNightImage;
+  } else if (
+    iconDescriptionElement === "thunderstorm-night" &&
+    temperature < 15 &&
+    temperature > 10
+  ) {
+    suggestionElement.innerHTML = "Mandatory: 🧥, 🧣, 🧤, ☂️";
+    bodyElement.style.backgroundImage = thunderstormNightImage;
+  } else if (
+    iconDescriptionElement === "thunderstorm-night" &&
+    temperature < 10
+  ) {
+    suggestionElement.innerHTML = "Better stay inside today!";
+    bodyElement.style.backgroundImage = thunderstormNightImage;
+  }
+
+  if (iconDescriptionElement === "snow-day" && temperature < 10) {
+    suggestionElement.innerHTML = "☃️ ❄️ 🏂 🎿 🏂!";
+    bodyElement.style.backgroundImage = snowDayImage;
+  }
+
+  if (iconDescriptionElement === "snow-night" && temperature < 10) {
+    suggestionElement.innerHTML =
+      "Good night, hope you are in a warm place! ☃️";
+    bodyElement.style.backgroundImage = snowNightImage;
+  }
+
+  if (iconDescriptionElement === "mist-day") {
+    suggestionElement.innerHTML =
+      "Are you driving today? Make sure to 👀 and slow down 🐢";
+    bodyElement.style.backgroundImage = mistDayImage;
+  }
+
+  if (iconDescriptionElement === "mist-night") {
+    suggestionElement.innerHTML =
+      "Are you driving tonight? Make sure to 👀 and slow down 🐢";
+    bodyElement.style.backgroundImage = mistNightImage;
   }
 
   getForecast(response.data.city);
