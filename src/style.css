@@ -110,8 +110,8 @@ main {
 }
 
 .description {
-  color: black;
-  font-size: 16px;
+  color: lightcoral;
+  font-size: 20px;
   font-weight: bold;
   text-transform: capitalize;
   text-align: center;
@@ -119,7 +119,7 @@ main {
 
 .suggestion {
   color: black;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
   text-align: center;
 }
