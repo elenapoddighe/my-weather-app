@@ -79,13 +79,6 @@ main {
   margin-top: 4px;
 }
 
-.description {
-  color: rgba(0, 0, 0, 0.6);
-  font-size: 16px;
-  text-transform: capitalize;
-  text-align: center;
-}
-
 .weather-info {
   color: rgba(0, 0, 0, 0.6);
   font-size: 16px;
@@ -112,6 +105,22 @@ main {
 
 .weather-info-right strong {
   color: lightcoral;
+}
+
+.description {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.suggestion {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: capitalize;
+  text-align: center;
 }
 .forecast {
   border-top: 1px solid #75b4e3;
