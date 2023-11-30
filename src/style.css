@@ -53,6 +53,7 @@ main {
   font-size: 38px;
   line-height: 48px;
   margin: 0;
+  padding-top: 15px;
   text-align: center;
 }
 
@@ -68,6 +69,7 @@ main {
 }
 
 .temperature {
+  color: rgba(0, 0, 0, 0.6);
   font-size: 45px;
   font-weight: bold;
   line-height: 48px;
@@ -108,7 +110,7 @@ main {
 }
 
 .description {
-  color: rgba(0, 0, 0, 0.6);
+  color: black;
   font-size: 16px;
   font-weight: bold;
   text-transform: capitalize;
@@ -116,10 +118,9 @@ main {
 }
 
 .suggestion {
-  color: rgba(0, 0, 0, 0.6);
+  color: black;
   font-size: 16px;
   font-weight: bold;
-  text-transform: capitalize;
   text-align: center;
 }
 .forecast {
@@ -127,7 +128,7 @@ main {
   display: flex;
   justify-content: space-around;
   margin-top: 10px;
-  padding: 20px 15px 0 15px;
+  padding: 20px 15px 20px 15px;
 }
 
 .forecast-date {
