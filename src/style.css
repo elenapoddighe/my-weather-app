@@ -46,18 +46,44 @@ main {
 
 .data {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .city {
   font-size: 38px;
   line-height: 48px;
   margin: 0;
+  text-align: center;
+}
+
+.temperature-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+}
+
+.temperature {
+  font-size: 45px;
+  font-weight: bold;
+  line-height: 48px;
+  margin-left: 5px;
+}
+
+.unit {
+  font-size: 20px;
+  margin-top: 4px;
 }
 
 .description {
+  color: rgba(0, 0, 0, 0.6);
   font-size: 16px;
   text-transform: capitalize;
+  text-align: center;
 }
 
 .weather-info {
@@ -65,33 +91,28 @@ main {
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
+  position: absolute;
+  top: 227px;
+  left: 450px;
 }
 
 .weather-info strong {
   color: lightcoral;
 }
 
-.temperature-container {
-  display: flex;
+.weather-info-right {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  position: absolute;
+  top: 227px;
+  right: 450px;
 }
 
-.icon {
-  width: 88px;
-  height: 88px;
+.weather-info-right strong {
+  color: lightcoral;
 }
-
-.temperature {
-  font-size: 88px;
-  font-weight: bold;
-  line-height: 88px;
-  margin-left: 5px;
-}
-
-.unit {
-  font-size: 28px;
-  margin-top: 6px;
-}
-
 .forecast {
   border-top: 1px solid #75b4e3;
   display: flex;
