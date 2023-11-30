@@ -134,6 +134,7 @@ main {
 .forecast-date {
   color: black;
   font-size: 16px;
+  font-weight: bold;
   padding-left: 10px;
 }
 
@@ -141,8 +142,14 @@ main {
   font-size: 13px;
 }
 
+.maximum-temp {
+  color: lightcoral;
+  font-weight: bolder;
+}
+
 .minimum-temp {
   color: rgba(0, 0, 0, 0.6);
+  font-weight: 500px;
 }
 
 footer {
