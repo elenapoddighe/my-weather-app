@@ -57,16 +57,9 @@ main {
   text-align: center;
 }
 
-.data-container {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-}
-
 .temperature-container {
   display: flex;
   justify-content: center;
-  margin: 0 110px 0 110px;
   padding-top: 10px;
 }
 
@@ -93,6 +86,9 @@ main {
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
+  position: fixed;
+  top: 227px;
+  left: 450px;
 }
 
 .weather-info strong {
@@ -104,28 +100,27 @@ main {
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
+  position: fixed;
+  top: 227px;
+  right: 450px;
 }
 
 .weather-info-right strong {
   color: lightcoral;
-}
-.description-suggestion-container {
-  text-align: center;
 }
 
 .description {
   color: lightcoral;
   font-size: 20px;
   font-weight: bold;
-  margin: 0;
   text-transform: capitalize;
+  text-align: center;
 }
 
 .suggestion {
   color: black;
   font-size: 20px;
   font-weight: bold;
-  margin: 10px 0;
   text-align: center;
 }
 .forecast {
